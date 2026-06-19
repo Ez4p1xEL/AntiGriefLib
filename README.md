@@ -55,7 +55,7 @@ val antiGrief: AntiGriefLib = AntiGriefLib.builder(javaPlugin)
     .build()
 
 // use the api to check permissions
-if (!antiGrief.canPlace(player, location)) {
+if (!antiGrief.test(player, Flag.PLACE, location)) {
     player.sendMessage(Component.text("You can't place it here!"))
 }
 ```
