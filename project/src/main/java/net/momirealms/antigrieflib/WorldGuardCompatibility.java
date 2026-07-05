@@ -1,4 +1,4 @@
-package net.momirealms.antigrieflib.comp;
+package net.momirealms.antigrieflib;
 
 import com.sk89q.worldedit.bukkit.BukkitAdapter;
 import com.sk89q.worldguard.WorldGuard;
@@ -7,14 +7,12 @@ import com.sk89q.worldguard.bukkit.util.Entities;
 import com.sk89q.worldguard.protection.flags.Flags;
 import com.sk89q.worldguard.protection.flags.StateFlag;
 import com.sk89q.worldguard.protection.regions.RegionContainer;
-import net.momirealms.antigrieflib.AbstractAntiGriefCompatibility;
-import net.momirealms.antigrieflib.Flag;
 import org.bukkit.Location;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
 
-public class WorldGuardCompatibility extends AbstractAntiGriefCompatibility {
+final class WorldGuardCompatibility extends AbstractAntiGriefCompatibility {
     private StateFlag PLACE_FLAG;
     private StateFlag BREAK_FLAG;
     private StateFlag INTERACT_FLAG;

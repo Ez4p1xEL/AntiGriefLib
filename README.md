@@ -15,6 +15,7 @@ Lands \
 NoBuildPlus \
 PlotSquared \
 PreciousStones \
+Protect \
 ProtectionStones \
 RedProtect \
 Residence \

@@ -1,6 +1,5 @@
-package net.momirealms.antigrieflib.comp;
+package net.momirealms.antigrieflib;
 
-import net.momirealms.antigrieflib.AbstractMemberAntiGriefCompatibility;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
@@ -9,7 +8,7 @@ import org.kingdoms.constants.player.KingdomPlayer;
 
 import java.util.Optional;
 
-public class KingdomsCompatibility extends AbstractMemberAntiGriefCompatibility {
+final class KingdomsCompatibility extends AbstractMemberAntiGriefCompatibility {
 
     public KingdomsCompatibility(Plugin plugin) {
         super(plugin);

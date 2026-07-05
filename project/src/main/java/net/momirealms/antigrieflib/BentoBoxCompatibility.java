@@ -1,7 +1,5 @@
-package net.momirealms.antigrieflib.comp;
+package net.momirealms.antigrieflib;
 
-import net.momirealms.antigrieflib.AbstractAntiGriefCompatibility;
-import net.momirealms.antigrieflib.Flag;
 import org.bukkit.Location;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
@@ -10,7 +8,7 @@ import world.bentobox.bentobox.BentoBox;
 import world.bentobox.bentobox.api.user.User;
 import world.bentobox.bentobox.lists.Flags;
 
-public class BentoBoxCompatibility extends AbstractAntiGriefCompatibility {
+final class BentoBoxCompatibility extends AbstractAntiGriefCompatibility {
 
     public BentoBoxCompatibility(Plugin plugin) {
         super(plugin);

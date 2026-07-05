@@ -1,11 +1,9 @@
-package net.momirealms.antigrieflib.comp;
+package net.momirealms.antigrieflib;
 
 import com.bekvon.bukkit.residence.containers.Flags;
 import com.bekvon.bukkit.residence.listeners.ResidenceEntityListener;
 import com.bekvon.bukkit.residence.protection.FlagPermissions;
 import com.bekvon.bukkit.residence.utils.Utils;
-import net.momirealms.antigrieflib.AbstractAntiGriefCompatibility;
-import net.momirealms.antigrieflib.Flag;
 import org.bukkit.Location;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
@@ -13,7 +11,7 @@ import org.bukkit.plugin.Plugin;
 
 import java.util.Optional;
 
-public class ResidenceCompatibility extends AbstractAntiGriefCompatibility {
+final class ResidenceCompatibility extends AbstractAntiGriefCompatibility {
 
     public ResidenceCompatibility(Plugin plugin) {
         super(plugin);

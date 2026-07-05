@@ -1,15 +1,14 @@
-package net.momirealms.antigrieflib.comp;
+package net.momirealms.antigrieflib;
 
 import com.craftaro.skyblock.api.SkyBlockAPI;
 import com.craftaro.skyblock.api.island.IslandRole;
-import net.momirealms.antigrieflib.AbstractMemberAntiGriefCompatibility;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
 
 import java.util.Optional;
 
-public class FabledSkyBlockCompatibility extends AbstractMemberAntiGriefCompatibility {
+final class FabledSkyBlockCompatibility extends AbstractMemberAntiGriefCompatibility {
 
     public FabledSkyBlockCompatibility(Plugin plugin) {
         super(plugin);

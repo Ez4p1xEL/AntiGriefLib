@@ -1,14 +1,13 @@
-package net.momirealms.antigrieflib.comp;
+package net.momirealms.antigrieflib;
 
 import com.plotsquared.bukkit.util.BukkitUtil;
-import net.momirealms.antigrieflib.AbstractMemberAntiGriefCompatibility;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
 
 import java.util.Optional;
 
-public class PlotSquaredV6V7Compatibility extends AbstractMemberAntiGriefCompatibility {
+final class PlotSquaredV6V7Compatibility extends AbstractMemberAntiGriefCompatibility {
 
     public PlotSquaredV6V7Compatibility(Plugin plugin) {
         super(plugin);

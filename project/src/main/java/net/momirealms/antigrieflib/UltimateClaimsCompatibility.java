@@ -1,9 +1,7 @@
-package net.momirealms.antigrieflib.comp;
+package net.momirealms.antigrieflib;
 
 import com.craftaro.ultimateclaims.UltimateClaims;
 import com.craftaro.ultimateclaims.member.ClaimPerm;
-import net.momirealms.antigrieflib.AbstractAntiGriefCompatibility;
-import net.momirealms.antigrieflib.Flag;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.entity.Entity;
@@ -12,7 +10,7 @@ import org.bukkit.plugin.Plugin;
 
 import java.util.Optional;
 
-public class UltimateClaimsCompatibility extends AbstractAntiGriefCompatibility {
+final class UltimateClaimsCompatibility extends AbstractAntiGriefCompatibility {
 
     private UltimateClaims ultimateClaims;
 

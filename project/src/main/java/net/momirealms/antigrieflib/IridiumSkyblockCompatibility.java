@@ -1,15 +1,13 @@
-package net.momirealms.antigrieflib.comp;
+package net.momirealms.antigrieflib;
 
 import com.iridium.iridiumskyblock.api.IridiumSkyblockAPI;
 import com.iridium.iridiumskyblock.dependencies.iridiumteams.PermissionType;
-import net.momirealms.antigrieflib.AbstractAntiGriefCompatibility;
-import net.momirealms.antigrieflib.Flag;
 import org.bukkit.Location;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
 
-public class IridiumSkyblockCompatibility extends AbstractAntiGriefCompatibility {
+final class IridiumSkyblockCompatibility extends AbstractAntiGriefCompatibility {
 
     private IridiumSkyblockAPI api;
 

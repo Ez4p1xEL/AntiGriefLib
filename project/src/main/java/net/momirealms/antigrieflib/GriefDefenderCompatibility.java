@@ -1,10 +1,8 @@
-package net.momirealms.antigrieflib.comp;
+package net.momirealms.antigrieflib;
 
 import com.griefdefender.api.GriefDefender;
 import com.griefdefender.api.User;
 import com.griefdefender.api.claim.TrustTypes;
-import net.momirealms.antigrieflib.AbstractAntiGriefCompatibility;
-import net.momirealms.antigrieflib.Flag;
 import org.bukkit.Location;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
@@ -12,7 +10,7 @@ import org.bukkit.plugin.Plugin;
 
 import java.util.Optional;
 
-public class GriefDefenderCompatibility extends AbstractAntiGriefCompatibility {
+final class GriefDefenderCompatibility extends AbstractAntiGriefCompatibility {
 
     public GriefDefenderCompatibility(Plugin plugin) {
         super(plugin);

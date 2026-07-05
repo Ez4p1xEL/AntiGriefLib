@@ -1,7 +1,5 @@
-package net.momirealms.antigrieflib.comp;
+package net.momirealms.antigrieflib;
 
-import net.momirealms.antigrieflib.AbstractAntiGriefCompatibility;
-import net.momirealms.antigrieflib.Flag;
 import org.bukkit.Location;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
@@ -10,7 +8,7 @@ import p1xel.nobuildplus.Flags;
 import p1xel.nobuildplus.NoBuildPlus;
 import p1xel.nobuildplus.api.NBPAPI;
 
-public class NoBuildPlusCompatibility extends AbstractAntiGriefCompatibility {
+final class NoBuildPlusCompatibility extends AbstractAntiGriefCompatibility {
     private NBPAPI nbpAPI;
 
     public NoBuildPlusCompatibility(Plugin plugin) {

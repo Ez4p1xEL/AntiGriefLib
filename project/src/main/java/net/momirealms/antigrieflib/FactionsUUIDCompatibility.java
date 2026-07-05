@@ -1,17 +1,15 @@
-package net.momirealms.antigrieflib.comp;
+package net.momirealms.antigrieflib;
 
 import com.massivecraft.factions.FactionsPlugin;
 import com.massivecraft.factions.listeners.FactionsBlockListener;
 import com.massivecraft.factions.listeners.FactionsEntityListener;
 import com.massivecraft.factions.perms.PermissibleActions;
-import net.momirealms.antigrieflib.AbstractAntiGriefCompatibility;
-import net.momirealms.antigrieflib.Flag;
 import org.bukkit.Location;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
 
-public class FactionsUUIDCompatibility extends AbstractAntiGriefCompatibility {
+final class FactionsUUIDCompatibility extends AbstractAntiGriefCompatibility {
 
     private FactionsPlugin plugin;
 

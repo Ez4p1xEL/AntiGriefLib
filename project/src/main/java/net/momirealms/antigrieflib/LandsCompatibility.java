@@ -1,9 +1,7 @@
-package net.momirealms.antigrieflib.comp;
+package net.momirealms.antigrieflib;
 
 import me.angeschossen.lands.api.LandsIntegration;
 import me.angeschossen.lands.api.flags.type.Flags;
-import net.momirealms.antigrieflib.AbstractAntiGriefCompatibility;
-import net.momirealms.antigrieflib.Flag;
 import org.bukkit.Location;
 import org.bukkit.entity.Enemy;
 import org.bukkit.entity.Entity;
@@ -13,7 +11,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.Optional;
 
-public class LandsCompatibility extends AbstractAntiGriefCompatibility {
+final class LandsCompatibility extends AbstractAntiGriefCompatibility {
     private JavaPlugin self;
     private LandsIntegration api;
 

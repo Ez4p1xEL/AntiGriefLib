@@ -1,10 +1,8 @@
-package net.momirealms.antigrieflib.comp;
+package net.momirealms.antigrieflib;
 
 import codes.wasabi.xclaim.api.Claim;
 import codes.wasabi.xclaim.api.enums.EntityGroup;
 import codes.wasabi.xclaim.api.enums.Permission;
-import net.momirealms.antigrieflib.AbstractAntiGriefCompatibility;
-import net.momirealms.antigrieflib.Flag;
 import org.bukkit.Location;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
@@ -13,7 +11,7 @@ import org.bukkit.plugin.Plugin;
 import java.util.Arrays;
 import java.util.Optional;
 
-public class XClaimCompatibility extends AbstractAntiGriefCompatibility {
+final class XClaimCompatibility extends AbstractAntiGriefCompatibility {
 
     public XClaimCompatibility(Plugin plugin) {
         super(plugin);

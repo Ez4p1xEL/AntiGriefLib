@@ -1,6 +1,5 @@
-package net.momirealms.antigrieflib.comp;
+package net.momirealms.antigrieflib;
 
-import net.momirealms.antigrieflib.AbstractMemberAntiGriefCompatibility;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
@@ -9,7 +8,7 @@ import us.talabrek.ultimateskyblock.api.uSkyBlockAPI;
 
 import java.util.Optional;
 
-public class USkyBlockCompatibility extends AbstractMemberAntiGriefCompatibility {
+final class USkyBlockCompatibility extends AbstractMemberAntiGriefCompatibility {
 
     private uSkyBlockAPI api;
 

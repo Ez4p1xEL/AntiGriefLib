@@ -1,15 +1,13 @@
-package net.momirealms.antigrieflib.comp;
+package net.momirealms.antigrieflib;
 
 import cn.lunadeer.dominion.api.DominionAPI;
 import cn.lunadeer.dominion.api.dtos.DominionDTO;
 import cn.lunadeer.dominion.api.dtos.flag.Flags;
-import net.momirealms.antigrieflib.AbstractAntiGriefCompatibility;
-import net.momirealms.antigrieflib.Flag;
 import org.bukkit.Location;
 import org.bukkit.entity.*;
 import org.bukkit.plugin.Plugin;
 
-public class DominionCompatibility extends AbstractAntiGriefCompatibility {
+final class DominionCompatibility extends AbstractAntiGriefCompatibility {
     private DominionAPI api;
 
     public DominionCompatibility(Plugin plugin) {

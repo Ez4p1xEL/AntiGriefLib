@@ -1,7 +1,5 @@
-package net.momirealms.antigrieflib.comp;
+package net.momirealms.antigrieflib;
 
-import net.momirealms.antigrieflib.AbstractAntiGriefCompatibility;
-import net.momirealms.antigrieflib.Flag;
 import net.william278.huskclaims.api.BukkitHuskClaimsAPI;
 import net.william278.huskclaims.libraries.cloplib.operation.OperationType;
 import org.bukkit.Location;
@@ -9,7 +7,7 @@ import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
 
-public class HuskClaimsCompatibility extends AbstractAntiGriefCompatibility {
+final class HuskClaimsCompatibility extends AbstractAntiGriefCompatibility {
 
     private BukkitHuskClaimsAPI api;
 

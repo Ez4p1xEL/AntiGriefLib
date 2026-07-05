@@ -1,7 +1,6 @@
-package net.momirealms.antigrieflib.comp;
+package net.momirealms.antigrieflib;
 
 import biz.princeps.landlord.api.ILandLord;
-import net.momirealms.antigrieflib.AbstractMemberAntiGriefCompatibility;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
@@ -9,7 +8,7 @@ import org.bukkit.plugin.Plugin;
 
 import java.util.Optional;
 
-public class LandlordCompatibility extends AbstractMemberAntiGriefCompatibility {
+final class LandlordCompatibility extends AbstractMemberAntiGriefCompatibility {
 
     private ILandLord landLord;
 

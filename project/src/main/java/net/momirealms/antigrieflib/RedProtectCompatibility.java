@@ -1,9 +1,7 @@
-package net.momirealms.antigrieflib.comp;
+package net.momirealms.antigrieflib;
 
 import br.net.fabiozumbi12.RedProtect.Bukkit.API.RedProtectAPI;
 import br.net.fabiozumbi12.RedProtect.Bukkit.RedProtect;
-import net.momirealms.antigrieflib.AbstractAntiGriefCompatibility;
-import net.momirealms.antigrieflib.Flag;
 import org.bukkit.Location;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
@@ -11,7 +9,7 @@ import org.bukkit.plugin.Plugin;
 
 import java.util.Optional;
 
-public class RedProtectCompatibility extends AbstractAntiGriefCompatibility {
+final class RedProtectCompatibility extends AbstractAntiGriefCompatibility {
 
     private RedProtectAPI api;
 

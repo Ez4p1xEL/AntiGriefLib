@@ -1,12 +1,10 @@
-package net.momirealms.antigrieflib.comp;
+package net.momirealms.antigrieflib;
 
 import com.massivecraft.factions.Board;
 import com.massivecraft.factions.FLocation;
 import com.massivecraft.factions.FPlayers;
 import com.massivecraft.factions.zcore.fperms.Access;
 import com.massivecraft.factions.zcore.fperms.PermissableAction;
-import net.momirealms.antigrieflib.AbstractAntiGriefCompatibility;
-import net.momirealms.antigrieflib.Flag;
 import org.bukkit.Location;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
@@ -14,7 +12,7 @@ import org.bukkit.plugin.Plugin;
 
 import java.util.Optional;
 
-public class SaberFactionsCompatibility extends AbstractAntiGriefCompatibility {
+final class SaberFactionsCompatibility extends AbstractAntiGriefCompatibility {
 
     public SaberFactionsCompatibility(Plugin plugin) {
         super(plugin);

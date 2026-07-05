@@ -1,12 +1,11 @@
-package net.momirealms.antigrieflib.comp;
+package net.momirealms.antigrieflib;
 
-import net.momirealms.antigrieflib.AbstractMemberAntiGriefCompatibility;
 import net.william278.husktowns.api.BukkitHuskTownsAPI;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
 
-public class HuskTownsCompatibility extends AbstractMemberAntiGriefCompatibility {
+final class HuskTownsCompatibility extends AbstractMemberAntiGriefCompatibility {
 
     private BukkitHuskTownsAPI api;
 

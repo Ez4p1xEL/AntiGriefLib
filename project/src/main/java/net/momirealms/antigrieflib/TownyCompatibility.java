@@ -1,16 +1,14 @@
-package net.momirealms.antigrieflib.comp;
+package net.momirealms.antigrieflib;
 
 import com.palmergames.bukkit.towny.TownyAPI;
 import com.palmergames.bukkit.towny.object.TownyPermission;
 import com.palmergames.bukkit.towny.utils.PlayerCacheUtil;
-import net.momirealms.antigrieflib.AbstractAntiGriefCompatibility;
-import net.momirealms.antigrieflib.Flag;
 import org.bukkit.Location;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
 
-public class TownyCompatibility extends AbstractAntiGriefCompatibility {
+final class TownyCompatibility extends AbstractAntiGriefCompatibility {
 
     public TownyCompatibility(Plugin plugin) {
         super(plugin);

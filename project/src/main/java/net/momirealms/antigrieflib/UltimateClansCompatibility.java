@@ -1,8 +1,7 @@
-package net.momirealms.antigrieflib.comp;
+package net.momirealms.antigrieflib;
 
 import me.ulrich.clans.Clans;
 import me.ulrich.clans.interfaces.ClaimImplement;
-import net.momirealms.antigrieflib.AbstractMemberAntiGriefCompatibility;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
@@ -10,7 +9,7 @@ import org.bukkit.plugin.Plugin;
 
 import java.util.Map;
 
-public class UltimateClansCompatibility extends AbstractMemberAntiGriefCompatibility {
+final class UltimateClansCompatibility extends AbstractMemberAntiGriefCompatibility {
 
     private Clans clans;
 

@@ -1,25 +1,25 @@
-package net.momirealms.antigrieflib.comp;
+package net.momirealms.antigrieflib;
 
-import net.momirealms.antigrieflib.AbstractAntiGriefCompatibility;
-import net.momirealms.antigrieflib.Flag;
-import net.sacredlabyrinth.Phaed.PreciousStones.api.Api;
+import net.crashcraft.crashclaim.CrashClaim;
+import net.crashcraft.crashclaim.api.CrashClaimAPI;
+import net.crashcraft.crashclaim.permissions.PermissionRoute;
 import org.bukkit.Location;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
 
-public class PreciousStonesCompatibility extends AbstractAntiGriefCompatibility {
+final class CrashClaimCompatibility extends AbstractAntiGriefCompatibility {
 
-    private Api api;
-
-    public PreciousStonesCompatibility(Plugin plugin) {
+    public CrashClaimCompatibility(Plugin plugin) {
         super(plugin);
     }
+
+    private CrashClaimAPI api;
 
     @SuppressWarnings("DuplicatedCode")
     @Override
     public void init() {
-        this.api = new Api();
+        api = CrashClaim.getPlugin().getApi();
         registerFlagTester(Flag.PLACE, this::canPlace);
         registerFlagTester(Flag.BREAK, this::canBreak);
         registerFlagTester(Flag.INTERACT, this::canInteract);
@@ -32,38 +32,38 @@ public class PreciousStonesCompatibility extends AbstractAntiGriefCompatibility 
     }
 
     private boolean canPlace(Player player, Location location) {
-        return api.canPlace(player, location);
+        return api.getPermissionHelper().hasPermission(player.getUniqueId(), location, PermissionRoute.BUILD);
     }
 
     private boolean canBreak(Player player, Location location) {
-        return api.canBreak(player, location);
+        return api.getPermissionHelper().hasPermission(player.getUniqueId(), location, PermissionRoute.BUILD);
     }
 
     private boolean canInteract(Player player, Location location) {
-        return api.canPlace(player, location);
+        return api.getPermissionHelper().hasPermission(player.getUniqueId(), location, PermissionRoute.INTERACTIONS);
     }
 
     private boolean canInteractEntity(Player player, Entity entity) {
-        return api.canPlace(player, entity.getLocation());
+        return api.getPermissionHelper().hasPermission(player.getUniqueId(), entity.getLocation(), PermissionRoute.ENTITIES);
     }
 
     private boolean canDamageEntity(Player player, Entity entity) {
-        return api.canBreak(player, entity.getLocation());
+        return api.getPermissionHelper().hasPermission(player.getUniqueId(), entity.getLocation(), PermissionRoute.ENTITIES);
     }
 
     private boolean canOpenContainer(Player player, Location location) {
-        return api.canPlace(player, location);
+        return api.getPermissionHelper().hasPermission(player.getUniqueId(), location, PermissionRoute.CONTAINERS);
     }
 
     private boolean canOpenDoor(Player player, Location location) {
-        return api.canPlace(player, location);
+        return api.getPermissionHelper().hasPermission(player.getUniqueId(), location, PermissionRoute.INTERACTIONS);
     }
 
     private boolean canUseButton(Player player, Location location) {
-        return api.canPlace(player, location);
+        return api.getPermissionHelper().hasPermission(player.getUniqueId(), location, PermissionRoute.INTERACTIONS);
     }
 
     private boolean canUsePressurePlate(Player player, Location location) {
-        return api.canPlace(player, location);
+        return api.getPermissionHelper().hasPermission(player.getUniqueId(), location, PermissionRoute.INTERACTIONS);
     }
 }

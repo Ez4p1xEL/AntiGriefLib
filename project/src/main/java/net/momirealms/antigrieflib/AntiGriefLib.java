@@ -1,6 +1,5 @@
 package net.momirealms.antigrieflib;
 
-import net.momirealms.antigrieflib.comp.*;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
@@ -324,6 +323,11 @@ public final class AntiGriefLib {
             getOptionalPlugin("NoBuildPlus").ifPresent(plugin -> {
                 if (classExists("p1xel{}nobuildplus{}NoBuildPlus")) {
                     consumer.accept(() -> new NoBuildPlusCompatibility(plugin));
+                }
+            });
+            getOptionalPlugin("Protect").ifPresent(plugin -> {
+                if (classExists("net{}thenextlvl{}protect{}ProtectPlugin")) {
+                    consumer.accept(() -> new ProtectCompatibility(plugin));
                 }
             });
         }
