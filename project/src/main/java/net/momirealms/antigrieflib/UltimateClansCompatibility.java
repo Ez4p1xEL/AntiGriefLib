@@ -24,7 +24,7 @@ final class UltimateClansCompatibility extends AbstractMemberAntiGriefCompatibil
     }
 
     @Override
-    public boolean isMemberAt(Player player, Location location) {
+    public boolean isMemberOrWild(Player player, Location location) {
         for (Map.Entry<String, ClaimImplement> entry : this.clans.getClaimAPI().findClaimedLocationImplement(location)) {
             ClaimImplement implement = entry.getValue();
             if (implement.canDestroyClaimLocation(player, location)) {

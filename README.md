@@ -20,6 +20,7 @@ ProtectionStones \
 RedProtect \
 Residence \
 SaberFactions \
+SimpleClaimSystem \
 SuperiorSkyBlock \
 Towny \
 UltimateClaims \

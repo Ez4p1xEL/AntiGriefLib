@@ -19,7 +19,7 @@ final class KingdomsCompatibility extends AbstractMemberAntiGriefCompatibility {
     }
 
     @Override
-    public boolean isMemberAt(Player player, Location location) {
+    public boolean isMemberOrWild(Player player, Location location) {
         Land land = Land.getLand(location);
         if (land == null || !land.isClaimed())
             return true;

@@ -22,9 +22,9 @@ final class LandlordCompatibility extends AbstractMemberAntiGriefCompatibility {
     }
 
     @Override
-    public boolean isMemberAt(Player player, Location location) {
+    public boolean isMemberOrWild(Player player, Location location) {
         return Optional.ofNullable(landLord.getWGManager().getRegion(location))
                 .map(region -> region.isOwner(player.getUniqueId()) || region.isFriend(player.getUniqueId()))
-                .orElse(false);
+                .orElse(true);
     }
 }

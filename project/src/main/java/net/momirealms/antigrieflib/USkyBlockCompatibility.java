@@ -22,7 +22,7 @@ final class USkyBlockCompatibility extends AbstractMemberAntiGriefCompatibility 
     }
 
     @Override
-    public boolean isMemberAt(Player player, Location location) {
+    public boolean isMemberOrWild(Player player, Location location) {
         return Optional.ofNullable(api.getIslandInfo(location))
                 .map(islandInfo -> islandInfo.getMembers().contains(player.getName()))
                 .orElse(true);

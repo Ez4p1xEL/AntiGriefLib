@@ -19,7 +19,7 @@ repositories {
 @Suppress
 dependencies {
     implementation(project(":common"))
-    implementation(project(":conflict-packages"))                                 // SaberFactions
+    implementation(project(":conflict-packages"))                     // SaberFactions
 
     compileOnly("io.papermc.paper:paper-api:1.20.4-R0.1-SNAPSHOT")                // Paper
     compileOnly("com.sk89q.worldguard:worldguard-bukkit:7.0.9")                   // WorldGuard
@@ -40,6 +40,7 @@ dependencies {
     compileOnly("com.github.UlrichBR:UClans-API:8.14.0")                          // UltimateClans
     compileOnly("cn.lunadeer:DominionAPI:4.6.0")                                  // UltimateClans
     compileOnly("com.github.Ez4p1xEL:NoBuildPlus:1.6.22")                         // NoBuildPlus
+    compileOnly("com.github.Xyness:SimpleClaimSystem:1.13")                       // SimpleClaimSystemV1
 
     compileOnly(files("libs/Residence-pruned.jar"))                        // Residence
     compileOnly(files("libs/KingdomsX-pruned.jar"))                        // KingdomsX

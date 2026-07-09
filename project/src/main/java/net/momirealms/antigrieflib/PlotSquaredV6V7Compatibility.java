@@ -18,7 +18,7 @@ final class PlotSquaredV6V7Compatibility extends AbstractMemberAntiGriefCompatib
     }
 
     @Override
-    public boolean isMemberAt(Player player, Location location) {
+    public boolean isMemberOrWild(Player player, Location location) {
         var psLocation = BukkitUtil.adapt(location);
         if (psLocation.isPlotRoad()) return false;
         if (!psLocation.isPlotArea()) return true;

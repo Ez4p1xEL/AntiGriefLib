@@ -21,17 +21,17 @@ public abstract class AbstractMemberAntiGriefCompatibility implements AntiGriefC
     @Override
     public <T> boolean test(Player player, @NotNull Flag<T> flag, T value) {
         if (value instanceof Location location) {
-            return isMemberAt(player, location);
+            return isMemberOrWild(player, location);
         } else if (value instanceof Entity entity) {
-            return isMember(player, entity);
+            return isMemberOrWild(player, entity);
         } else {
             return false;
         }
     }
 
-    public boolean isMember(Player player, Entity entity) {
-        return isMemberAt(player, entity.getLocation());
+    public boolean isMemberOrWild(Player player, Entity entity) {
+        return isMemberOrWild(player, entity.getLocation());
     }
 
-    public abstract boolean isMemberAt(Player player, Location location);
+    public abstract boolean isMemberOrWild(Player player, Location location);
 }

@@ -19,7 +19,7 @@ final class HuskTownsCompatibility extends AbstractMemberAntiGriefCompatibility 
     }
 
     @Override
-    public boolean isMemberAt(Player player, Location location) {
+    public boolean isMemberOrWild(Player player, Location location) {
         return api.getClaimAt(api.getPosition(location))
                 .map(townClaim -> townClaim.town().getMembers().containsKey(player.getUniqueId()))
                 .orElse(true);

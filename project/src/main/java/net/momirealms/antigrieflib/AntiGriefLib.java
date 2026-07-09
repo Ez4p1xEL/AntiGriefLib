@@ -330,6 +330,13 @@ public final class AntiGriefLib {
                     consumer.accept(() -> new ProtectCompatibility(plugin));
                 }
             });
+            getOptionalPlugin("SimpleClaimSystem").ifPresent(plugin -> {
+                if (classExists("fr{}xyness{}SimpleClaimSystem{}API{}SCS_API")) {
+                    consumer.accept(() -> new SimpleClaimSystemV2Compatibility(plugin));
+                } else if (classExists("fr{}xyness{}SCS{}API{}SimpleClaimSystemAPI")) {
+                    consumer.accept(() -> new SimpleClaimSystemV1Compatibility(plugin));
+                }
+            });
         }
     }
 }

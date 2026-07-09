@@ -19,7 +19,7 @@ final class FabledSkyBlockCompatibility extends AbstractMemberAntiGriefCompatibi
     }
 
     @Override
-    public boolean isMemberAt(Player player, Location location) {
+    public boolean isMemberOrWild(Player player, Location location) {
         return Optional.ofNullable(SkyBlockAPI.getIslandManager().getIslandAtLocation(location))
                 .map(island -> {
                             if (island.isCoopPlayer(player))

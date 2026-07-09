@@ -13,5 +13,14 @@ allprojects {
     tasks.withType<JavaCompile> {
         options.encoding = "UTF-8"
         options.release.set(17)
+        dependsOn(tasks.clean)
+    }
+
+    java {
+        toolchain {
+            languageVersion = JavaLanguageVersion.of(25)
+        }
+        withSourcesJar()
+        disableAutoTargetJvm()
     }
 }
