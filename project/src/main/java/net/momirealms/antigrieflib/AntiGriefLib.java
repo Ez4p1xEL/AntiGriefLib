@@ -337,6 +337,11 @@ public final class AntiGriefLib {
                     consumer.accept(() -> new SimpleClaimSystemV1Compatibility(plugin));
                 }
             });
+            getOptionalPlugin("LandClaimPlugin").ifPresent(plugin -> {
+                if (classExists("org{}ayosynk{}landClaimPlugin{}api{}LandClaimAPI")) {
+                    consumer.accept(() -> new LandClaimPluginCompatibility(plugin));
+                }
+            });
         }
     }
 }

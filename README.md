@@ -10,6 +10,7 @@ HuskClaims \
 HuskTowns \
 IridiumSkyBlock \
 KingdomsX \
+LandClaimPlugin \
 Landlord \
 Lands \
 NoBuildPlus \

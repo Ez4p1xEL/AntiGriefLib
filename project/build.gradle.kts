@@ -52,6 +52,7 @@ dependencies {
     compileOnly(files("libs/hClaims-pruned.jar"))                          // hClaims
     compileOnly(files("libs/protect-3.4.1.jar"))                           // Protect
     compileOnly(files("libs/BellClaims-0.5.1.jar"))                        // BellClaims
+    compileOnly(files("libs/LandClaimPlugin-2.5.0.jar"))                   // LandClaimPlugin
 
     compileOnly("io.github.fabiozumbi12.RedProtect:RedProtect-Core:8.1.1") { exclude(group = "*") }        // RedProtect
     compileOnly("io.github.fabiozumbi12.RedProtect:RedProtect-Spigot:8.1.1") { exclude(group = "*") }      // RedProtect
