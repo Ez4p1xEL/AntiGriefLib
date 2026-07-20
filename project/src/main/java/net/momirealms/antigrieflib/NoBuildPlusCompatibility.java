@@ -33,32 +33,33 @@ final class NoBuildPlusCompatibility extends AbstractAntiGriefCompatibility {
     private boolean canPlace(Player player, Location location) {
         String world = player.getWorld().getName();
         if (!nbpAPI.isWorldEnabled(world)) return true;
-        return !nbpAPI.canExecute(world, Flags.build);
+        return nbpAPI.canDo(world, Flags.build);
     }
 
     private boolean canBreak(Player player, Location location) {
         String world = player.getWorld().getName();
         if (!nbpAPI.isWorldEnabled(world)) return true;
-        return !nbpAPI.canExecute(world, Flags.destroy);
+        return nbpAPI.canDo(world, Flags.destroy);
+
     }
 
     private boolean canInteract(Player player, Location location) {
         String world = player.getWorld().getName();
         if (!nbpAPI.isWorldEnabled(world)) return true;
-        return !nbpAPI.canExecute(world, Flags.use);
+        return nbpAPI.canDo(world, Flags.use);
     }
 
     private boolean canInteractEntity(Player player, Entity entity) {
         String world = player.getWorld().getName();
         if (!nbpAPI.isWorldEnabled(world)) return true;
         return switch (entity.getType()) {
-            case VILLAGER -> !nbpAPI.canExecute(world, Flags.villager);
+            case VILLAGER -> nbpAPI.canDo(world, Flags.villager);
             case HORSE, DONKEY, MULE, SKELETON_HORSE, ZOMBIE_HORSE, MINECART, MINECART_CHEST, MINECART_FURNACE,
-                 MINECART_HOPPER, MINECART_TNT -> !nbpAPI.canExecute(world, Flags.ride);
-            case ITEM_FRAME, GLOW_ITEM_FRAME -> !nbpAPI.canExecute(world, Flags.frame);
-            case ARMOR_STAND -> !nbpAPI.canExecute(world, Flags.armorstand);
-            case PAINTING -> !nbpAPI.canExecute(world, Flags.painting);
-            case FISHING_HOOK -> !nbpAPI.canExecute(world, Flags.hook);
+                 MINECART_HOPPER, MINECART_TNT -> nbpAPI.canDo(world, Flags.ride);
+            case ITEM_FRAME, GLOW_ITEM_FRAME -> nbpAPI.canDo(world, Flags.frame);
+            case ARMOR_STAND -> nbpAPI.canDo(world, Flags.armorstand);
+            case PAINTING -> nbpAPI.canDo(world, Flags.painting);
+            case FISHING_HOOK -> nbpAPI.canDo(world, Flags.hook);
             default -> true;
         };
     }
@@ -66,7 +67,7 @@ final class NoBuildPlusCompatibility extends AbstractAntiGriefCompatibility {
     private boolean canDamageEntity(Player player, Entity entity) {
         String world = player.getWorld().getName();
         if (!nbpAPI.isWorldEnabled(world)) return true;
-        return !nbpAPI.canExecute(
+        return nbpAPI.canDo(
                 world,
                 entity instanceof Player ? Flags.pvp : Flags.mob_damage
         );
@@ -75,24 +76,24 @@ final class NoBuildPlusCompatibility extends AbstractAntiGriefCompatibility {
     private boolean canOpenContainer(Player player, Location location) {
         String world = player.getWorld().getName();
         if (!nbpAPI.isWorldEnabled(world)) return true;
-        return !nbpAPI.canExecute(world, Flags.container);
+        return nbpAPI.canDo(world, Flags.container);
     }
 
     private boolean canOpenDoor(Player player, Location location) {
         String world = player.getWorld().getName();
         if (!nbpAPI.isWorldEnabled(world)) return true;
-        return !nbpAPI.canExecute(world, Flags.door_interact);
+        return nbpAPI.canDo(world, Flags.door_interact);
     }
 
     private boolean canUseButton(Player player, Location location) {
         String world = player.getWorld().getName();
         if (!nbpAPI.isWorldEnabled(world)) return true;
-        return !nbpAPI.canExecute(world, Flags.button);
+        return nbpAPI.canDo(world, Flags.button);
     }
 
     private boolean canUsePressurePlate(Player player, Location location) {
         String world = player.getWorld().getName();
         if (!nbpAPI.isWorldEnabled(world)) return true;
-        return !nbpAPI.canExecute(world, Flags.pressure_plate);
+        return nbpAPI.canDo(world, Flags.pressure_plate);
     }
 }

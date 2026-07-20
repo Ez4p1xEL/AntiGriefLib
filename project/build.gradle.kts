@@ -39,7 +39,7 @@ dependencies {
     compileOnly("biz.princeps:landlord-core:4.365")                               // Landlord
     compileOnly("com.github.UlrichBR:UClans-API:8.14.0")                          // UltimateClans
     compileOnly("cn.lunadeer:DominionAPI:4.6.0")                                  // UltimateClans
-    compileOnly("com.github.Ez4p1xEL:NoBuildPlus:1.6.22")                         // NoBuildPlus
+    compileOnly("com.github.Ez4p1xEL:NoBuildPlus:1.7.0")                         // NoBuildPlus
     compileOnly("com.github.Xyness:SimpleClaimSystem:1.13")                       // SimpleClaimSystemV1
 
     compileOnly(files("libs/Residence-pruned.jar"))                        // Residence
